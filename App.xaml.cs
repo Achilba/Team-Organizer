@@ -68,7 +68,8 @@ public partial class App : Application
         _vm.ShowZaapWindowRequested += ApplyZaapWindow;
         _vm.ToggleZaapWindowRequested += () =>
         {
-            try { if (_zaapWin.IsVisible) _zaapWin.Hide(); else ApplyZaapWindow(); }
+            // Fenêtre ouverte : on remet les Zaaps dans la barre Mini. Fenêtre masquée (bouton « – ») : on la réaffiche.
+            try { if (_zaapWin.IsVisible) _vm.DetachedZaap = false; else ApplyZaapWindow(); }
             catch (Exception ex) { _storage.LogError("Fenêtre Zaaps : " + ex); }
         };
 

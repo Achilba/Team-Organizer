@@ -392,6 +392,7 @@ public class MainViewModel : ObservableObject
         CopyAlmanaxZaapCommand = new RelayCommand(() => CopyZaap(ZaapData.All.First(z => z.Coord == "-5,-23")));
         OpenAlmanaxFromMiniCommand = new RelayCommand(() => { Page = "almanax"; MiniModeRequested?.Invoke(false); });
         ToggleZaapWindowCommand = new RelayCommand(() => ToggleZaapWindowRequested?.Invoke());
+        DetachZaapCommand = new RelayCommand(() => DetachedZaap = true);
         FloatNoteCommand = new RelayCommand(() => FloatNoteRequested?.Invoke());
         AccentPickCommand = new RelayCommand(p =>
         {
@@ -755,6 +756,7 @@ public class MainViewModel : ObservableObject
     public RelayCommand CopyAlmanaxZaapCommand { get; private set; }
     public RelayCommand OpenAlmanaxFromMiniCommand { get; private set; }
     public RelayCommand ToggleZaapWindowCommand { get; private set; }
+    public RelayCommand DetachZaapCommand { get; private set; }
 
     public ObservableCollection<Character> Characters => Data.Characters;
 
