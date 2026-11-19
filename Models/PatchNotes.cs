@@ -5,11 +5,16 @@ public record PatchNote(string Version, string Date, string[] Lines);
 public static class PatchNotes
 {
     /// <summary>Version courante de l'appli (à incrémenter à chaque compilation livrée).</summary>
-    public const string Current = "0.14.33";
+    public const string Current = "0.14.34";
 
     /// <summary>Du plus récent au plus ancien.</summary>
     public static readonly PatchNote[] All =
     {
+        new("0.14.34", "09/11/2026", new[]
+        {
+            "NOUVEAU — Barre Mini : avec l'option « Zaap déporté », un bouton « Zaaps » affiche ou masque la fenêtre Zaaps d'un clic.",
+            "AMÉLIORÉ — Ajustements d'affichage.",
+        }),
         new("0.14.33", "09/11/2026", new[]
         {
             "NOUVEAU — Le fichier de l'appli s'appelle maintenant TeamOrganizer.exe. Les mises à jour automatiques continuent de fonctionner et tes données ne changent pas.",

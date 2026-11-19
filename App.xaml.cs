@@ -66,6 +66,11 @@ public partial class App : Application
         _zaapWin = new ZaapWindow(_vm);
         _vm.DetachedZaapChanged += ApplyZaapWindow;
         _vm.ShowZaapWindowRequested += ApplyZaapWindow;
+        _vm.ToggleZaapWindowRequested += () =>
+        {
+            try { if (_zaapWin.IsVisible) _zaapWin.Hide(); else ApplyZaapWindow(); }
+            catch (Exception ex) { _storage.LogError("Fenêtre Zaaps : " + ex); }
+        };
 
         _vm.ToggleVisibilityRequested += ToggleVisibility;
         _vm.MiniModeRequested += SetMini;

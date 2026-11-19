@@ -37,7 +37,6 @@ public static class ThemeCatalog
         Derived("brakmar", "Brâkmar", 355, 0.30, "#F0544F", "#FFB347"),
         Derived("cawotte", "Cawotte", 24, 0.30, "#E8793A", "#2FD0B8"),
         Derived("emeraude", "Émeraude", 150, 0.28, "#5FD97A", "#FF8A5C"),
-        Derived("pourpre", "Pourpre", 275, 0.30, "#B57BFF", "#FFC857"),
         Derived("turquoise", "Turquoise", 188, 0.32, "#35D0E0", "#FF7A66"),
         Derived("ebene", "Ébène", 40, 0.04, "#E6E1D5", "#F2A33A"),
     };
